@@ -1,6 +1,6 @@
-package org.example;
+package org.example.BigO;
 
-public class BigO_1 {
+public class BigO_logn {
 
     public static int  printItems(int n) {
        return n+n;
