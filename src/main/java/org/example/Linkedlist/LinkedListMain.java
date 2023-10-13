@@ -13,5 +13,13 @@ public class LinkedListMain {
         linkedList.append(2);
         linkedList.printList();
 
+        //(2) Items- Returns 2 Node
+       System.out.println(linkedList.removeLastNode().value);
+       //(1) Items- Returns 1 Node
+        System.out.println(linkedList.removeLastNode().value);
+        //(0) Items- Returns 0 Node
+        System.out.println(linkedList.removeLastNode());
+
+
     }
 }

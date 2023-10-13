@@ -49,4 +49,18 @@ public class LinkedListConstrutor {
          }
          length++;// increase the length
     }
+    public Node removeLastNode() {
+         if(length==0) return null;//base condition
+         Node temp=head;
+         Node pre=head;
+         while(temp.next!=null){
+             pre=temp;
+             temp=temp.next;
+         }
+         tail=pre;
+         tail.next=null;
+         length--;
+         return  temp;
+
+    }
 }
