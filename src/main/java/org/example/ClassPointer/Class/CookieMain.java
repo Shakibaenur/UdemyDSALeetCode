@@ -1,4 +1,4 @@
-package org.example.ClassPointer;
+package org.example.ClassPointer.Class;
 
 public class CookieMain {
     public static void main(String[] args) {

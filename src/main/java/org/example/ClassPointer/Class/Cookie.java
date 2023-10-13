@@ -1,4 +1,4 @@
-package org.example.ClassPointer;
+package org.example.ClassPointer.Class;
 
 public class Cookie {
     private String color;
