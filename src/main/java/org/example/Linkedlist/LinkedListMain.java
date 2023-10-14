@@ -19,7 +19,10 @@ public class LinkedListMain {
         System.out.println(linkedList.removeLastNode().value);
         //(0) Items- Returns 0 Node
         System.out.println(linkedList.removeLastNode());
+        //add an item to  first means prepend
+        linkedList.prepend(89);
 
+        linkedList.printList();
 
     }
 }
