@@ -40,5 +40,10 @@ public class LinkedListMain {
 
         linkedList.printList();
 
+
+        System.out.println("Remove: "+  linkedList.remove(1));
+        System.out.println("Print list");
+
+        linkedList.printList();
     }
 }
