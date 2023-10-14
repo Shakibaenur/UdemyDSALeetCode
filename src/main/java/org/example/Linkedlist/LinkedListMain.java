@@ -35,7 +35,10 @@ public class LinkedListMain {
         System.out.println("Set value at 2 : "+    linkedList.set(2,6));
         linkedList.printList();
 
+        linkedList.insert(0,1);
+        System.out.println("Print list");
 
+        linkedList.printList();
 
     }
 }
