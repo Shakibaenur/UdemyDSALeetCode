@@ -5,73 +5,92 @@ public class LinkedListConstrutor {
     private Node tail;
     private int length;
 
-     class Node {
+    class Node {
         int value;
         Node next;
 
-        public Node(int value){
-            this.value=value;
+        public Node(int value) {
+            this.value = value;
         }
     }
 
-    public LinkedListConstrutor(int value){
-        Node newNode=new Node(value);
-        head=newNode;
-        tail=newNode;
-        length=1;
+    public LinkedListConstrutor(int value) {
+        Node newNode = new Node(value);
+        head = newNode;
+        tail = newNode;
+        length = 1;
     }
-    public void printList(){
-         Node tempNode=head;
-         while(tempNode!=null){
-             System.out.println(tempNode.value);
-             tempNode = tempNode.next;
-         }
+
+    public void printList() {
+        Node tempNode = head;
+        while (tempNode != null) {
+            System.out.println(tempNode.value);
+            tempNode = tempNode.next;
+        }
     }
-    public void getHead(){
-         System.out.println("Head: "+head.value);
+
+    public void getHead() {
+        System.out.println("Head: " + head.value);
     }
-    public void getTail(){
-         System.out.println("Tail: "+ tail.value);
+
+    public void getTail() {
+        System.out.println("Tail: " + tail.value);
     }
-    public void getLength(){
-         System.out.println("Length: "+length);
+
+    public void getLength() {
+        System.out.println("Length: " + length);
     }
-    public void append(int value){
-         Node newNode=new Node(value);
-         if(length==0){
-             //if linked list id empty
-             head=newNode;
-             tail=newNode;
-         }else{
-             //if linked list is not empty
-             tail.next=newNode;// ask tail.next node point to newNode
-             tail=newNode;//assign tail as new Node
-         }
-         length++;// increase the length
+
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            //if linked list id empty
+            head = newNode;
+            tail = newNode;
+        } else {
+            //if linked list is not empty
+            tail.next = newNode;// ask tail.next node point to newNode
+            tail = newNode;//assign tail as new Node
+        }
+        length++;// increase the length
     }
+
     public Node removeLastNode() {
-         if(length==0) return null;//base condition
-         Node temp=head;
-         Node pre=head;
-         while(temp.next!=null){
-             pre=temp;
-             temp=temp.next;
-         }
-         tail=pre;
-         tail.next=null;
-         length--;
-         return  temp;
+        if (length == 0) return null;//base condition
+        Node temp = head;
+        Node pre = head;
+        while (temp.next != null) {
+            pre = temp;
+            temp = temp.next;
+        }
+        tail = pre;
+        tail.next = null;
+        length--;
+        return temp;
 
     }
-    public void prepend(int value){
-         Node newNode=new Node(value);
-         if(length==0){
-             head=newNode;
-             tail=newNode;
-         }else{
-             newNode.next=head;
-             head=newNode;
-         }
-         length++;
+
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
+    }
+
+    public Node removeFirst() {
+        if (length == 0)
+            return null;
+        Node temp=head;
+        head=head.next;
+        temp=null;
+        length--;
+        if(length==0)
+            tail=null;
+        return temp;
     }
 }

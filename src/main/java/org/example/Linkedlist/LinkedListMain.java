@@ -23,6 +23,7 @@ public class LinkedListMain {
         linkedList.prepend(89);
 
         linkedList.printList();
+        System.out.println(linkedList.removeFirst());
 
     }
 }
