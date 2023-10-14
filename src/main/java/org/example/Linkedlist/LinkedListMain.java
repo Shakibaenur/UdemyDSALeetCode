@@ -30,6 +30,12 @@ public class LinkedListMain {
         linkedList.append(5);
 
         System.out.println("Get at position 2 : "+ linkedList.get(2).value);
+        linkedList.printList();
+        System.out.println("Set value at 3 : "+    linkedList.set(3,6));
+        System.out.println("Set value at 2 : "+    linkedList.set(2,6));
+        linkedList.printList();
+
+
 
     }
 }
