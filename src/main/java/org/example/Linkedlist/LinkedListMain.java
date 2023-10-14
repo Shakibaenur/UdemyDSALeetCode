@@ -25,5 +25,11 @@ public class LinkedListMain {
         linkedList.printList();
         System.out.println(linkedList.removeFirst());
 
+        linkedList.append(3);
+        linkedList.append(4);
+        linkedList.append(5);
+
+        System.out.println("Get at position 2 : "+ linkedList.get(2).value);
+
     }
 }
