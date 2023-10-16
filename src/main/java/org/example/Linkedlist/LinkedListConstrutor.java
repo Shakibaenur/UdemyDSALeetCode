@@ -145,6 +145,21 @@ public class LinkedListConstrutor {
         length--;
         return temp;
     }
+    public Node findTheMiddleNode(){
+        if (head == null) {
+            return null; // Empty list, no middle node
+        }
+
+        Node slowPointer = head;
+        Node fastPointer = head;
+
+        while (fastPointer != null && fastPointer.next != null) {
+            slowPointer = slowPointer.next;
+            fastPointer = fastPointer.next.next;
+        }
+
+        return slowPointer;
+    }
     public void reverse(){
         Node temp=head;
         head=tail;
