@@ -7,6 +7,10 @@ public class DoublyMain {
         doublyLinkedList.printList();
 
         doublyLinkedList.append(10);
+        doublyLinkedList.append(12);
+        doublyLinkedList.printList();
+
+        doublyLinkedList.removeLast();
         doublyLinkedList.printList();
     }
 }

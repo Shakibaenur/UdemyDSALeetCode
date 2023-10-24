@@ -33,6 +33,23 @@ public class DoublyLinkedList {
         tail=newNode;
         length++;
     }
+
+    public Node removeLast(){
+        if(length==0){
+            return  null;
+        }
+        if(length==1){
+            head=null;
+            tail=null;
+        }
+        Node temp=tail;
+        tail=tail.prev;
+        tail.next=null;
+        temp.prev=null;
+        length--;
+        return temp;
+    }
+
     public void printList(){
         Node temp= head;
         while(temp!=null){
